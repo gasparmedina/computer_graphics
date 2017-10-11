@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1507165620 source:/home/cg/Escritorio/proyectos/Practico_0/main.c
+	<stdio.h>
+	<stdlib.h>
+	"exercise_1.h"
+
+1507165581 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_1.c
+	<stdio.h>
+	<stdlib.h>
+
+1507165589 /home/cg/Escritorio/proyectos/Practico_0/exercise_1.h
+
+1507763594 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_10.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763600 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_11.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763607 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_12.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763615 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_13.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763621 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_14.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763628 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_15.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763634 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_16.c
+	<stdio.h>
+	<stdlib.h>
+
+1507762038 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_2.c
+	<stdio.h>
+	<stdlib.h>
+
+1507762048 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_3.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763540 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_4.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763546 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_5.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763553 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_6.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763563 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_7.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763579 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_8.c
+	<stdio.h>
+	<stdlib.h>
+
+1507763585 source:/home/cg/Escritorio/proyectos/Practico_0/exercise_9.c
+	<stdio.h>
+	<stdlib.h>
+

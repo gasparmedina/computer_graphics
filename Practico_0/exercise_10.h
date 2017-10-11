@@ -1,0 +1,6 @@
+#ifndef EXERCISE_10_H_INCLUDED
+#define EXERCISE_10_H_INCLUDED
+
+void exercise10();
+
+#endif // EXERCISE_10_H_INCLUDED
