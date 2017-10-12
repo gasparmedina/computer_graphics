@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="CG-Framework-3.0" />
+		<Option makefile="Makefile.linux" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="./cg" prefix_auto="1" extension_auto="1" />
+				<Option object_output="./" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile all" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile all &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Makefile.linux" />
+		<Unit filename="Makefile.mac" />
+		<Unit filename="Makefile.win32" />
+		<Unit filename="build.bat" />
+		<Unit filename="build.sh" />
+		<Unit filename="clean.bat" />
+		<Unit filename="clean.sh" />
+		<Unit filename="framework/canvas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="framework/canvas.h" />
+		<Unit filename="framework/color.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="framework/color.h" />
+		<Unit filename="framework/mm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="framework/mm.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="readme.txt" />
+		<Unit filename="run.bat" />
+		<Unit filename="run.sh" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
