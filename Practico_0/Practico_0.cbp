@@ -22,9 +22,77 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="exercise_1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_1.h" />
+		<Unit filename="exercise_10.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_10.h" />
+		<Unit filename="exercise_11.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_11.h" />
+		<Unit filename="exercise_12.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_12.h" />
+		<Unit filename="exercise_13.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_13.h" />
+		<Unit filename="exercise_14.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_14.h" />
+		<Unit filename="exercise_15.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_15.h" />
+		<Unit filename="exercise_16.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_16.h" />
+		<Unit filename="exercise_2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_2.h" />
+		<Unit filename="exercise_3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_3.h" />
+		<Unit filename="exercise_4.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_4.h" />
+		<Unit filename="exercise_5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_5.h" />
+		<Unit filename="exercise_6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_6.h" />
+		<Unit filename="exercise_7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_7.h" />
+		<Unit filename="exercise_8.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_8.h" />
+		<Unit filename="exercise_9.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="exercise_9.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="utilc/arrayUtil.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utilh/arrayUtil.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

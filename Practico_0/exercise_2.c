@@ -12,4 +12,7 @@ void exercise2(){
 
  printArray(100, vec);
 
+ printf("\n");
+ printf("\n");
+
 }

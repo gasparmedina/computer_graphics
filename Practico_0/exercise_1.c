@@ -17,4 +17,6 @@ void exercise1(){
     printf("Cantidad de bytes para un float* : %d \n", sizeof(float*));
     printf("Cantidad de bytes para un void* : %d \n", sizeof(void*));
 
+    printf("\n");
+
 }
