@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "utilh/arrayUtil.h"
 
 void exercise5(){
 
@@ -17,6 +18,7 @@ void exercise5(){
 
  printArray(input, vec);
 
+ printf("\n");
  printf("\n");
 
 }

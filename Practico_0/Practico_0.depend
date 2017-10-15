@@ -102,21 +102,26 @@
 	<stdio.h>
 	<stdlib.h>
 
-1508027834 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_3.c
+1508036768 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_3.c
 	<stdio.h>
 	<stdlib.h>
+	"utilh/arrayUtil.h"
 
-1508027789 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_4.c
+1508036774 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_4.c
 	<stdio.h>
 	<stdlib.h>
+	"utilh/arrayUtil.h"
 
-1508028858 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_5.c
+1508036782 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_5.c
 	<stdio.h>
 	<stdlib.h>
+	"utilh/arrayUtil.h"
 
-1507763553 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_6.c
+1508036958 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_6.c
 	<stdio.h>
 	<stdlib.h>
+	"utilh/arrayUtil.h"
+	"utilh/fileUtil.h"
 
 1507763563 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_7.c
 	<stdio.h>
@@ -135,7 +140,7 @@
 	<stdlib.h>
 	"utilh/arrayUtil.h"
 
-1507844153 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilh/arrayUtil.h
+1508035003 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilh/arrayUtil.h
 
 1507844598 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/main.c
 	<stdio.h>
@@ -191,6 +196,12 @@
 1507763758 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_16.h
 
 1507846359 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilc/arrayUtil.c
+	<stdio.h>
+	<stdlib.h>
+
+1508036860 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilh/fileUtil.h
+
+1508077994 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilc/fileUtil.c
 	<stdio.h>
 	<stdlib.h>
 
