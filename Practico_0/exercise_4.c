@@ -14,5 +14,6 @@ void exercise4(){
  printArray(100, vec);
 
  printf("\n");
+ printf("\n");
 
 }
