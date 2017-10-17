@@ -15,7 +15,8 @@ void exercise7(){
     miVec2.a = 2;
 
     int result = add(miVec1, miVec2);
-    printf("REsultado ejercicio 7 %d", result);
+    printf("Resultado ejercicio 7 = %d", result);
+    printf("\n");
 
 }
 
