@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "utilh/arrayUtil.h"
+#include "util/arrayUtil.h"
 
 void exercise5(){
 

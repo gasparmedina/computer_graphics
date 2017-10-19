@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "utilh/arrayUtil.h"
-#include "utilh/fileUtil.h"
+#include "util/arrayUtil.h"
+#include "util/fileUtil.h"
 
 void exercise6(){
 
