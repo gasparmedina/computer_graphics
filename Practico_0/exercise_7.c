@@ -1,27 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Vec3 {
-
- int a;
-
-};
+#include "structs/Vec3.h"
 
 void exercise7(){
 
-    struct Vec3 miVec1;
-    struct Vec3 miVec2;
-    miVec1.a = 2;
-    miVec2.a = 2;
+    Vec3 myVec1;
+    Vec3 myVec2;
+    vec3Init(&myVec1, 1, 0, 0);
+    vec3Init(&myVec2, 4, 0, 0);
 
-    int result = add(miVec1, miVec2);
-    printf("Resultado ejercicio 7 = %d", result);
-    printf("\n");
-
-}
-
-int add (struct Vec3 vec1, struct Vec3 vec2){
-
-    return vec1.a + vec2.a;
+    int result = vec3Add(myVec1, myVec2);
+    printf("Resultado ejercicio 7 = %d \n\n", result);
 
 }

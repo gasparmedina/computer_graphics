@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "structs/Vec3.h"
+#include "Vec3.h"
 
-void initVec3 (Vec3 *vecParam, int x, int y, int z) {
+void vec3Init(Vec3 *vecParam, int x, int y, int z) {
 
-    vecParam->x = x
-    vecParam->y = y
-    vecParam->z = z
+    vecParam->x = x;
+    vecParam->y = y;
+    vecParam->z = z;
 
 }
 
-void addpVec3(struct Vec3 *vec1, struct Vec3 *vec2, struct Vec3 *vec3) {
+void vec3Addp(Vec3 *vec1,Vec3 *vec2,Vec3 *vec3) {
 
    (*vec3).x = (*vec1).x + (*vec2).x;
    (*vec3).y = (*vec1).y + (*vec2).y;
@@ -18,7 +18,17 @@ void addpVec3(struct Vec3 *vec1, struct Vec3 *vec2, struct Vec3 *vec3) {
 
 }
 
-void printVec3(struct Vec3 *vec){
+void vec3Print(Vec3 *vec){
+
+    printf("x->%d \n", (*vec).x);
+    printf("y->%d \n", (*vec).y);
+    printf("z->%d \n", (*vec).z);
+
+}
+
+int vec3Add(Vec3 vec1, Vec3 vec2){
+
+    return vec1.x + vec2.x;
 
 }
 

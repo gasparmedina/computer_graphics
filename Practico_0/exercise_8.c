@@ -4,16 +4,20 @@
 
 void exercise8(){
 
-    struct Vec3 myVec1;
-    struct Vec3 myVec2;
-    struct Vec3 myVec3;
+    Vec3 myVec1;
+    Vec3 myVec2;
+    Vec3 myVec3;
 
-    initVec3(&myVec1, 1, 2, 3);
-    initVec3(&myVec2, 4, 2, 3);
-    initVec3(&myVec3, 4, 2, 5);
+    vec3Init(&myVec1, 1, 2, 3);
+    vec3Init(&myVec2, 4, 2, 3);
 
-    addpVec3(&miVec1, &miVec2, &miVec3);
-    printf("Resultado ejercicio 8 = %d", miVec3.value);
+    vec3Addp(&myVec1, &myVec2, &myVec3);
+
+    printf("Resultado ejercicio 8 \n");
+
+    vec3Print(&myVec3);
+
+    printf("\n");
     printf("\n");
 
 }

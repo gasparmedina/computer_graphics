@@ -16,7 +16,7 @@
 #include "exercise_14.h"
 #include "exercise_15.h"
 #include "exercise_16.h"
-#include "utilh/arrayUtil.h"
+#include "util/arrayUtil.h"
 
 int main(){
 
