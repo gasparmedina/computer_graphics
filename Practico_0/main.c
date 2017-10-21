@@ -8,7 +8,6 @@
 #include "exercise_6.h"
 #include "exercise_7.h"
 #include "exercise_8.h"
-#include "exercise_9.h"
 #include "exercise_10.h"
 #include "exercise_11.h"
 #include "exercise_12.h"
@@ -73,11 +72,11 @@ int main(){
     exercise8();
 
     /*
+    exercise9
+
     Mover la declaración del tipo de dato “Vec3” y las funciones add y addp a su propio archivo y
     referenciarlo desde main.
     */
-    exercise9();
-
 
     /*
     Desarrollar un programa C que crea un array de 100 “Vec3” donde los 3 componentes (x, y, z)
