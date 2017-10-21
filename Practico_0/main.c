@@ -17,7 +17,8 @@
 #include "exercise_16.h"
 #include "util/arrayUtil.h"
 
-int main(){
+int main()
+{
 
     /*
     Desarrollar un programa C que imprime en la Terminal el largo en bytes de los siguientes tipos de

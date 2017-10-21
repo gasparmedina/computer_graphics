@@ -1,13 +1,14 @@
 #ifndef VEC3_INCLUDED
 #define VEC3_INCLUDED
 
-typedef struct {
+typedef struct
+{
 
- int x;
- int y;
- int z;
+    int x;
+    int y;
+    int z;
 
-}Vec3;
+} Vec3;
 
 /*
 Inicializa una estructura de datos Vec3 con los elementos pasados por parametro

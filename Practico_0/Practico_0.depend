@@ -70,23 +70,24 @@
 	<stdio.h>
 	<stdlib.h>
 
-1507848104 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_1.c
+1508622156 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_1.c
 	<stdio.h>
 	<stdlib.h>
 
-1508603232 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_10.c
+1508622221 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_10.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Vec3.h"
 
-1508603585 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_11.c
+1508622230 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_11.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Vec3.h"
 
-1507763607 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_12.c
+1508622925 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_12.c
 	<stdio.h>
 	<stdlib.h>
+	"structs/Matrix.h"
 
 1507763615 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_13.c
 	<stdio.h>
@@ -104,33 +105,33 @@
 	<stdio.h>
 	<stdlib.h>
 
-1508373721 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_3.c
+1508622269 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_3.c
 	<stdio.h>
 	<stdlib.h>
 	"util/arrayUtil.h"
 
-1508373721 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_4.c
+1508622269 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_4.c
 	<stdio.h>
 	<stdlib.h>
 	"util/arrayUtil.h"
 
-1508373740 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_5.c
+1508622269 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_5.c
 	<stdio.h>
 	<stdlib.h>
 	"util/arrayUtil.h"
 
-1508373740 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_6.c
+1508622299 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_6.c
 	<stdio.h>
 	<stdlib.h>
 	"util/arrayUtil.h"
 	"util/fileUtil.h"
 
-1508380725 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_7.c
+1508622299 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_7.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Vec3.h"
 
-1508380333 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_8.c
+1508622299 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_8.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Vec3.h"
@@ -139,14 +140,14 @@
 	<stdio.h>
 	<stdlib.h>
 
-1508373703 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_2.c
+1508622269 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_2.c
 	<stdio.h>
 	<stdlib.h>
 	"util/arrayUtil.h"
 
 1508035003 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/utilh/arrayUtil.h
 
-1508447780 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/main.c
+1508622299 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/main.c
 	<stdio.h>
 	<stdlib.h>
 	"exercise_1.h"
@@ -208,11 +209,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1508455783 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/arrayUtil.c
+1508622188 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/arrayUtil.c
 	<stdio.h>
 	<stdlib.h>
 
-1508078100 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/fileUtil.c
+1508622230 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/fileUtil.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -220,10 +221,16 @@
 
 1508036860 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/fileUtil.h
 
-1508603570 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.h
+1508622188 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.h
 
-1508603266 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.c
+1508622175 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.c
 	<stdio.h>
 	<stdlib.h>
 	"Vec3.h"
+
+1508622909 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.h
+
+1508622947 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.c
+	<stdio.h>
+	<stdlib.h>
 

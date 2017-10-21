@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void exercise1(){
+void exercise1()
+{
 
     printf("Cantidad de bytes para un char : %d \n", sizeof(char));
     printf("Cantidad de bytes para un int : %d \n", sizeof(int));

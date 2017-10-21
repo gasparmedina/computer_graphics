@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "structs/Vec3.h"
 
-void exercise7(){
+void exercise7()
+{
 
     Vec3 myVec1;
     Vec3 myVec2;

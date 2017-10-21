@@ -2,19 +2,21 @@
 #include <stdlib.h>
 #include "util/arrayUtil.h"
 
-void exercise4(){
+void exercise4()
+{
 
- int vec[100];
+    int vec[100];
 
- srand(time(NULL));
+    srand(time(NULL));
 
- for (int i = 0; i < 100; i++) {
-    vec[i] = rand() % 2;
- }
+    for (int i = 0; i < 100; i++)
+    {
+        vec[i] = rand() % 2;
+    }
 
- printArray(100, vec);
+    printArray(100, vec);
 
- printf("\n");
- printf("\n");
+    printf("\n");
+    printf("\n");
 
 }

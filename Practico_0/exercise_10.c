@@ -2,20 +2,22 @@
 #include <stdlib.h>
 #include "structs/Vec3.h"
 
-void exercise10(){
+void exercise10()
+{
 
- Vec3 vec[100];
+    Vec3 vec[100];
 
- for (int i = 0; i < 100; i++) {
-    vec[i] = vec3RandomInit();
- }
+    for (int i = 0; i < 100; i++)
+    {
+        vec[i] = vec3RandomInit();
+    }
 
- printf("Resultado ejercicio 10 \n");
+    printf("Resultado ejercicio 10 \n");
 
- printVec3Array(100, vec);
+    printVec3Array(100, vec);
 
- printf("\n");
- printf("\n");
+    printf("\n");
+    printf("\n");
 
 
 }
