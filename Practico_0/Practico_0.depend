@@ -74,14 +74,15 @@
 	<stdio.h>
 	<stdlib.h>
 
-1508456246 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_10.c
+1508603232 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_10.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Vec3.h"
 
-1507763600 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_11.c
+1508603585 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_11.c
 	<stdio.h>
 	<stdlib.h>
+	"structs/Vec3.h"
 
 1507763607 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_12.c
 	<stdio.h>
@@ -219,9 +220,9 @@
 
 1508036860 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/util/fileUtil.h
 
-1508455742 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.h
+1508603570 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.h
 
-1508457513 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.c
+1508603266 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Vec3.c
 	<stdio.h>
 	<stdlib.h>
 	"Vec3.h"

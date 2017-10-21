@@ -4,16 +4,15 @@
 
 void exercise10(){
 
- Vec3 vec[2];
+ Vec3 vec[100];
 
- for (int i = 0; i < 2; i++) {
-    Vec3 myVec;
-    vec[i] = vec3RandomInit(&myVec);
+ for (int i = 0; i < 100; i++) {
+    vec[i] = vec3RandomInit();
  }
 
  printf("Resultado ejercicio 10 \n");
 
- printVec3Array(2, vec);
+ printVec3Array(100, vec);
 
  printf("\n");
  printf("\n");

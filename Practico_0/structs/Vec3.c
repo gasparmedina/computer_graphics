@@ -44,6 +44,19 @@ Vec3 vec3RandomInit(){
 
 }
 
+Vec3 vec3RandomCustomInterval(int minInterval, int maxInterval){
+
+   Vec3 result;
+
+   result.x = rand() % (maxInterval + 1 - minInterval) + minInterval;
+   result.y = rand() % (maxInterval + 1 - minInterval) + minInterval;
+   result.z = rand() % (maxInterval + 1 - minInterval) + minInterval;
+
+   return result;
+
+}
+
+
 void printVec3Array(int arraySize, Vec3 *myVec){
     for (int i = 0; i < arraySize ; i++) {
         vec3Print(&myVec[i]);

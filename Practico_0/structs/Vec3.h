@@ -41,4 +41,10 @@ Imprime un array con estructuras de tipo Vec3
 */
 void printVec3Array(int arraySize, Vec3 *myVec);
 
+/*
+Genera una estructura de datos de tipo Vec3, en la cual cada elemento x,y,z de la
+estructura es asignado un valor entre minInterval y maxInterval
+*/
+Vec3 vec3RandomCustomInterval(int minInterval, int maxInterval);
+
 #endif // VEC3_INCLUDED
