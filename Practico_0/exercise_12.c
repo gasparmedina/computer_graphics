@@ -36,7 +36,6 @@ void exercise12()
 
         for(int j = 0; j< cloumns; j++)
         {
-            array[i][j] = vec3RandomCustomInterval(12,52);
             vec3Print(&array[i][j]);
         }
 

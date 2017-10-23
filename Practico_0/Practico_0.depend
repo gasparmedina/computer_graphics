@@ -84,14 +84,15 @@
 	<stdlib.h>
 	"structs/Vec3.h"
 
-1508622925 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_12.c
+1508628997 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_12.c
+	<stdio.h>
+	<stdlib.h>
+	"structs/Vec3.h"
+
+1508644804 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_13.c
 	<stdio.h>
 	<stdlib.h>
 	"structs/Matrix.h"
-
-1507763615 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_13.c
-	<stdio.h>
-	<stdlib.h>
 
 1507763621 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/exercise_14.c
 	<stdio.h>
@@ -228,9 +229,10 @@
 	<stdlib.h>
 	"Vec3.h"
 
-1508622909 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.h
+1508645194 /home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.h
 
-1508622947 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.c
+1508645100 source:/home/cg/Escritorio/proyectos/computer_graphics/Practico_0/structs/Matrix.c
 	<stdio.h>
 	<stdlib.h>
+	"Matrix.h"
 
