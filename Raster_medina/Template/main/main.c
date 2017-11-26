@@ -1,9 +1,16 @@
 #include "../framework/canvas.h"
 #include "../framework/mm.h"
 #include "../structs/Obj.h"
+#include "../shader.h"
+
+#include "SDL/SDL_image.h"
 
 //Esta es la librería a importar para tener acceso a la api de OpenGL
+#ifdef WIN32
+#include "glew.h"
+#else
 #include "GL/gl.h"
+#endif
 
 /*
 
@@ -24,10 +31,15 @@ char backFaceCulling = 0;
 char lighting = 0;
 char wireframe = 0;
 char gourandShading = 0;
+char zbuff = 0;
 unsigned char key_pressed[1024];
+char use_shader = 1;
+char specular = 0;
 Obj *result = NULL;
-
-
+Shader gouraud = NULL;
+GLint uniform_especular = NULL;
+GLint uniform_tex = NULL;
+GLuint texture = NULL;
 
 int main(int argc, char* argv[])
 {
@@ -63,14 +75,78 @@ int main(int argc, char* argv[])
 
     memset(key_pressed, 0, 1024);
 
+    // Cargamos el shader y la textura
+    loadShaderAndTexture();
+
     // Inicializo el gameLoop
     initGameLoop();
 
     // Liberamos los recursos
     freeMemoryObj(result);
+    shader_free(gouraud);
+    glDeleteTextures(1,&texture);
     cg_close();
 
     return 0;
+
+}
+
+void loadShaderAndTexture()
+{
+
+    gouraud = shader_new("shaders/gouraud_vp.glsl", "shaders/gouraud_fp.glsl");
+    uniform_especular = shader_get_unif_loc(gouraud, "especular");
+    uniform_tex = shader_get_unif_loc(gouraud, "tex");
+
+    //Cargo la imagen de disco usando SDL_image
+    SDL_Surface* surface = IMG_Load("data/models/obj/knight_good.png");
+    if (surface==NULL)   //Si falla la carga de la imagen, despliego el mensaje de error correspondiente y termino el programa.
+    {
+        printf("Error: \"%s\"\n",SDL_GetError());
+        return 1;
+    }
+    else
+    {
+
+        printf("Imagen ok: \"%d\"\n", 1);
+    }
+
+    //Creo un espacio para alojar una textura en memoria de video
+    glGenTextures(1,&texture);
+    //Activo la textura nro 0
+    glActiveTexture(GL_TEXTURE0);
+    //Habilito la carga para la textura recien creada
+    glBindTexture(GL_TEXTURE_2D,texture);
+
+    //Cargo los datos de la imagen en la textura.
+    glTexImage2D(GL_TEXTURE_2D,
+                 0,
+                 GL_RGBA,
+                 surface->w,
+                 surface->h,
+                 0,
+                 GL_RGB,GL_UNSIGNED_BYTE,
+                 surface->pixels);
+    //Luego de copiada la imagen a memoria de video, puedo liberarla sin problemas
+    SDL_FreeSurface(surface);
+
+    //Seteo el filtro a usar cuando se mapea la textura a una superficie mas chica (GL_LINEAR = filtro bilineal)
+    glTexParameteri(GL_TEXTURE_2D,
+                    GL_TEXTURE_MIN_FILTER,
+                    GL_LINEAR);
+    //Seteo el filtro a usar cuando se mapea la textura a una superficie mas grande (GL_LINEAR = filtro bilineal)
+    glTexParameteri(GL_TEXTURE_2D,
+                    GL_TEXTURE_MAG_FILTER,
+                    GL_LINEAR);
+
+    //Seteo el comportamiento cuando encuentro coordenadas de textura fuera del rango [0,1]
+    //GL_REPEAT es el comportamiento por defecto.
+    glTexParameteri(GL_TEXTURE_2D,
+                    GL_TEXTURE_WRAP_S,
+                    GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D,
+                    GL_TEXTURE_WRAP_T,
+                    GL_REPEAT);
 
 }
 
@@ -127,13 +203,28 @@ void initGameLoop()
                     break;
                 }
                 // Con la tecla F4 se habilita el gourand shading
-                else if (event.key.keysym.sym == SDLK_g)
+                else if (event.key.keysym.sym == SDLK_F4)
                 {
                     gourandShading = !gourandShading;
                     if(gourandShading)
                         glShadeModel(GL_FLAT);
                     else
                         glShadeModel(GL_SMOOTH);
+                    break;
+                }
+                // Con la tecla F5 se habilita la textura
+                else if (event.key.keysym.sym == SDLK_F5)
+                {
+                    use_shader = !use_shader;
+                    break;
+                }
+                else if (event.key.keysym.sym == SDLK_F6)
+                {
+                    zbuff = !zbuff;
+                    if(zbuff)
+                        glEnable(GL_DEPTH_TEST);
+                    else
+                        glDisable(GL_DEPTH_TEST);
                     break;
                 }
                 else if (event.key.keysym.sym != SDLK_ESCAPE)
@@ -170,8 +261,28 @@ void initGameLoop()
         //Limpio el canvas, para empezar a dibujar un nuevo cuadro
         glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
-        // Mostramos el obj a la geometria de OPENGL
-        showObj(result);
+        //Informo a OpenGL que para todas las operaciones a continuación utilice las texturas 2D cargadas
+        glEnable(GL_TEXTURE_2D);
+
+        if(use_shader)
+        {
+            shader_use(gouraud);
+            glUniform1i(uniform_especular, specular);
+            //Le digo al shader que el sampler2D de nombre "tex" se corresponde con GL_TEXTURE0
+            //que es donde cargué mi textura.
+            glUniform1i(uniform_tex, 0);
+            //Luego asocio la textura con el id "texture"
+            glBindTexture(GL_TEXTURE_2D,texture);
+            // Mostramos el obj a la geometria de OPENGL
+            showObj(result);
+            shader_stop(gouraud);
+        }
+        else
+        {
+            glBindTexture(GL_TEXTURE_2D,texture);
+            // Mostramos el obj a la geometria de OPENGL
+            showObj(result);
+        }
 
         //Por último, actualizo el canvas para que lo renderizado sea visible.
         cg_repaint();

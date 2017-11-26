@@ -43,7 +43,7 @@
 		<Unit filename="clean.bat" />
 		<Unit filename="clean.sh" />
 		<Unit filename="data/models/obj/knight.obj" />
-		<Unit filename="data/models/obj/knight_normales.obj" />
+		<Unit filename="data/models/obj/knight_good.png" />
 		<Unit filename="data/models/obj/knight_texturas.obj" />
 		<Unit filename="framework/canvas.c">
 			<Option compilerVar="CC" />
@@ -67,6 +67,13 @@
 		<Unit filename="readme.txt" />
 		<Unit filename="run.bat" />
 		<Unit filename="run.sh" />
+		<Unit filename="shader.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shader.h" />
+		<Unit filename="shader.o" />
+		<Unit filename="shaders/gouraud_fp.glsl" />
+		<Unit filename="shaders/gouraud_vp.glsl" />
 		<Unit filename="structs/Obj.c">
 			<Option compilerVar="CC" />
 		</Unit>

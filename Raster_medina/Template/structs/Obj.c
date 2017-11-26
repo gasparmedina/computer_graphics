@@ -415,11 +415,12 @@ void loadObj(char* fileName, Obj *objParam)
     createVertexArray(objParam);
     // Creamos el array de normales
     createNormalArray(objParam);
+    // Creamos el array de texturas
+    createTexturesArray(objParam);
 }
 
 void createVertexArray(Obj * objParam)
 {
-
     int vertexArraySize = objParam->numberOfFaces*3*3;
     vertices = (float *) malloc(sizeof(float) * vertexArraySize);
 
@@ -463,19 +464,22 @@ void createNormalArray(Obj * objParam)
 
 void createTexturesArray(Obj * objParam)
 {
+
     int texturesArraySize = objParam->numberOfFaces*3*2;
     texturas = (float *) malloc(sizeof(float) * texturesArraySize);
 
     for (int i = 0; i < objParam->numberOfFaces; ++i)
     {
-        texturas[(6 * i) + 0] = objParam->textures[objParam->faces[i]->texturas[0] - 1]->x;
-        texturas[(6 * i) + 1] = objParam->textures[objParam->faces[i]->texturas[0] - 1]->y;
 
-        texturas[(6 * i) + 2] = objParam->textures[objParam->faces[i]->texturas[1] - 1]->x;
-        texturas[(6 * i) + 3] = objParam->textures[objParam->faces[i]->texturas[1] - 1]->y;
+            texturas[(6 * i) + 0] = objParam->textures[objParam->faces[i]->texturas[0] - 1]->x;
+            texturas[(6 * i) + 1] = objParam->textures[objParam->faces[i]->texturas[0] - 1]->y;
 
-        texturas[(6 * i) + 4] = objParam->textures[objParam->faces[i]->texturas[2] - 1]->x;
-        texturas[(6 * i) + 5] = objParam->textures[objParam->faces[i]->texturas[2] - 1]->y;
+            texturas[(6 * i) + 2] = objParam->textures[objParam->faces[i]->texturas[1] - 1]->x;
+            texturas[(6 * i) + 3] = objParam->textures[objParam->faces[i]->texturas[1] - 1]->y;
+
+            texturas[(6 * i) + 4] = objParam->textures[objParam->faces[i]->texturas[2] - 1]->x;
+            texturas[(6 * i) + 5] = objParam->textures[objParam->faces[i]->texturas[2] - 1]->y;
+
     }
 }
 
@@ -489,8 +493,8 @@ void showObj(Obj * obj)
     glEnableClientState(GL_NORMAL_ARRAY);
     glNormalPointer(GL_FLOAT,0, normales);
 
-    //glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-    //glTexCoordPointer(2, GL_FLOAT, 0, texturas);
+    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+    glTexCoordPointer(2, GL_FLOAT, 0, texturas);
 
     // draw
     glDrawArrays(GL_TRIANGLES, 0, obj->numberOfFaces * 3);
@@ -498,33 +502,7 @@ void showObj(Obj * obj)
     // deactivate vertex arrays after drawing
     glDisableClientState(GL_VERTEX_ARRAY);
     glDisableClientState(GL_NORMAL_ARRAY);
-    //glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-}
-
-void showObj1(Obj * obj)
-{
-    int i;
-    glBegin(GL_TRIANGLES);
-    //glColor3f(1.0,0.0,0.0);
-    for(i=0; i< obj->numberOfFaces; i++)
-    {
-        // glVertex3f(
-        //     obj->vertices[obj->faces[i]->vert[0] -1]->x,
-        //     obj->vertices[obj->faces[i]->vert[0] -1]->y,
-        //     obj->vertices[obj->faces[i]->vert[0] -1]->z
-        // );
-        // glVertex3f(
-        //     obj->vertices[obj->faces[i]->vert[1] -1]->x,
-        //     obj->vertices[obj->faces[i]->vert[1] -1]->y,
-        //     obj->vertices[obj->faces[i]->vert[1] -1]->z
-        // );
-        // glVertex3f(
-        //     obj->vertices[obj->faces[i]->vert[2] -1]->x,
-        //     obj->vertices[obj->faces[i]->vert[2] -1]->y,
-        //     obj->vertices[obj->faces[i]->vert[2] -1]->z
-        // );
-    }
-    glEnd();
+    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 }
 
 void freeMemoryObj(Obj * obj)
@@ -540,6 +518,16 @@ void freeMemoryObj(Obj * obj)
     {
         free(obj->vertices[j]);
     }
+
+    for (int k = 0; k < obj->numberOfTextures; ++k)
+    {
+        free(obj->textures[k]);
+    }
+
+    free(vertices);
+    free(normales);
+    free(texturas);
+
     free(obj);
 }
 
