@@ -156,12 +156,6 @@ void loadTextures(Obj* obj, char* fileName)
 
 }
 
-
-/*
-Lee cada linea del archivo obj, se fija si es una cara,
-y si es una cara carga los valores en el obj que se paso
-por parametro
-*/
 void loadFaces(Obj* obj, char* fileName)
 {
 
@@ -176,75 +170,6 @@ void loadFaces(Obj* obj, char* fileName)
     file = fopen(fileName, "r");
     // Vertice temporal para agregar la info del archivo y agregar a la lista del vertices del obj
     Face *faceTemp;
-
-    int countFaces = 0;
-    int vert[4];
-    int numsides = 4;
-
-    // Si el archivo no existe salimos con error
-    if (file == NULL)
-    {
-        exit(EXIT_FAILURE);
-    }
-    else
-    {
-        // Sino recorremos cada linea del archivo con la funcion fgets
-        while ((fgets(storedString,60,file)) != NULL)
-        {
-            int h = 0;
-            // Nos fijamos si la linea es una cara
-            if (storedString[0] == 'f' && storedString[1] == ' ')
-            {
-                token = strtok(storedString," ");
-
-                while(((token = strtok(NULL," ")) != NULL))
-                {
-                    strcpy(temp,token);
-                    temp[strcspn(temp,"/")] = 0;
-                    vert[h] = (int)strtol(temp,NULL,10);
-                    h++;
-                }
-
-                // Asignamos memoria para la nueva cara
-                faceTemp = (Face *)malloc(sizeof(Face));
-                //Le seteamos la cantidad de lados de la cara
-                faceTemp-> numsides;
-                // Cargamos los vertices de la cara
-                for(int i=0; i<numsides; i++)
-                {
-                    faceTemp->vert[i] = vert[i];
-                }
-
-                // Cargamos la nueva cara al array de caras del struct obj
-                obj->faces[countFaces] = faceTemp;
-
-                countFaces++;
-
-            }
-        }
-
-        obj->numberOfFaces = countFaces;
-    }
-
-    // Cerramos la lectura del archivo.
-    fclose(file);
-
-}
-
-void loadFaces2(Obj* obj, char* fileName)
-{
-
-    char temp[50];
-    // Variable para almacenar los valores de los vertices x, y , z al hacer un stok
-    char * token;
-    // Definimos una variable para alamacenar un archivo
-    FILE *file;
-    // Variable para guardar cada linea del archivo a leer
-    char storedString[60];
-    // Abrimos el archivo que queremos leer, r nos dice que lo abrimos en modo de lectura
-    file = fopen(fileName, "r");
-    // Vertice temporal para agregar la info del archivo y agregar a la lista del vertices del obj
-    Face2 *faceTemp;
 
     int countFaces = 0;
     int vert[4];
@@ -301,7 +226,7 @@ void loadFaces2(Obj* obj, char* fileName)
 
                     if(h==0)
                     {
-                        faceTemp = (Face2 *)malloc(sizeof(Face2));
+                        faceTemp = (Face *)malloc(sizeof(Face));
                     }
 
                     faceTemp->vertices[h] = (int)strtol(tokens[0],NULL,10);
@@ -408,7 +333,7 @@ void loadObj(char* fileName, Obj *objParam)
     // Cargamos la normales de los vertices
     loadNormales(objParam, fileName);
     // Cargamos las caras al obj
-    loadFaces2(objParam, fileName);
+    loadFaces(objParam, fileName);
     // Cargamos las texturas
     loadTextures(objParam, fileName);
     // Creamos el array de vertices
