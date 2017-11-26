@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
     result = (Obj *)malloc(sizeof(Obj));
 
     // Cargamos la informacion del archivo al espacio de memoria antes reservado
-    loadObj("data/models/obj/knight_normales.obj", result);
+    loadObj("data/models/obj/knight_texturas.obj", result);
 
     memset(key_pressed, 0, 1024);
 
@@ -112,6 +112,7 @@ void initGameLoop()
                         glDisable(GL_CULL_FACE);
                     break;
                 }
+                // Con la tecla F3 se habilita las luces
                 else if (event.key.keysym.sym == SDLK_F3)
                 {
                     lighting = !lighting;
@@ -125,6 +126,7 @@ void initGameLoop()
                         glDisable(GL_LIGHT0);
                     break;
                 }
+                // Con la tecla F4 se habilita el gourand shading
                 else if (event.key.keysym.sym == SDLK_g)
                 {
                     gourandShading = !gourandShading;
